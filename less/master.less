@@ -1,0 +1,23 @@
+//
+// Master LESS file
+// --------------------------------------------------
+// This is the entry file for your Bootstrap customizations
+
+// import bootstrap entry file here to compile the whole bootstrap CSS
+@import "../bower_components/bootstrap/less/bootstrap.less";
+
+// or you can choose to cherry-pick which bootstrap @imports you want to include in the compiled stylesheet
+// for eg:
+// @import "../bower_components/bootstrap/less/variables.less";
+// @import "../bower_components/bootstrap/less/mixins.less";
+// ... import other core bootstrap LESS files
+// Refer to "../bower_components/bootstrap/less/bootstrap.less" for more.
+
+// import your custom less files
+// the following files and structure are intended to just be guidelines,
+// you can choose how to structure your less project
+@import "variables.less";
+@import "mixins.less";
+@import "layout.less";
+@import "theme.less";
+@import "typography.less";

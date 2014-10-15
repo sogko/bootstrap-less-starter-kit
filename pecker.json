@@ -1,0 +1,67 @@
+{
+  "name": "bootstrap-less-starter-kit",
+  "baseUrl": "/static",
+  "destDir": "./dist",
+  "assets": [
+    {
+      "type": "package",
+      "name": "assets",
+      "assetNames": [
+        "custom-bootstrap.css",
+        "bootstrap/js/bootstrap.min.js"
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "bootstrap",
+      "folder": "./bower_components/bootstrap/dist"
+    },
+    {
+      "type": "file",
+      "name": "custom-bootstrap.css",
+      "files": [
+        "./less/master.less"
+      ],
+      "watch": [
+        "./less/*.less"
+      ],
+      "skipHash": true,
+      "transform": [
+        {
+          "fn": "less",
+          "args": {
+            "paths": [
+              "./less/",
+              "./bower_components/bootstrap/less/"
+            ]
+          }
+        },
+        "autoprefixer"
+      ]
+    },
+    {
+      "type": "file",
+      "name": "custom-bootstrap.min.css",
+      "files": [
+        "./less/master.less"
+      ],
+      "watch": [
+        "./less/*.less"
+      ],
+      "skipHash": true,
+      "transform": [
+        {
+          "fn": "less",
+          "args": {
+            "paths": [
+              "./less/",
+              "./bower_components/bootstrap/less/"
+            ]
+          }
+        },
+        "autoprefixer",
+        "clean-css"
+      ]
+    }
+  ]
+}
